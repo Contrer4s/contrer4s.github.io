@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta
+        name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!--=============== FAVICON ===============-->
+        <link
+        rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon"/>
+
+        <!--=============== REMIXICONS ===============-->
+        <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet"/>
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/promos.css"/>
+        <link rel="stylesheet" href="assets/style.css"/>
+
+        <title>Urban Roll - Sushi Restaurant</title>
+
+        <!--Icon-Font-->
+        <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">
+                    <img src="assets/img/logo.png" alt="logo image"/>
+                    Urban Roll
+                </a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__links active-link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__links">About Us</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#popular" class="nav__links">Combos</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#recently" class="nav__links">Menu</a>
+                        </li>
+                    </ul>
+
+                    <!-- close button -->
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+
+                    <img src="assets/img/leaf-branch-6.png" alt="nav image" class="nav__img-1"/>
+                    <img src="assets/img/leaf-branch-7.png" alt="nav image" class="nav__img-2"/>
+                </div>
+
+                <div
+                    class="nav__buttons">
+                    <!-- theme change button -->
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                    <!-- toggle button -->
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-apps-2-line"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!--==================== MAIN ====================-->
+        <main
+            class="main">
+            <!--==================== PrevScreen ====================-->
+            <div class="preview">
+                <div class="popup-screen" data-target="companosh">
+                    <div class="popup-box">
+                        <i class="ri-close-circle-fill close-btn"></i>
+                        <div class="image__details">
+                            <img src="./assets/img/compartir.png" alt=""/>
+                        </div>
+
+                        <div class="namePrice">
+                            <h3>Para
+                                <br/>
+                                Compartir</h3>
+                            <span>$300.00
+                            </span>
+                        </div>
+                        <dfn>
+                            <p>Res Blue & Guamuchilito
+                                <br/>
+                                4 Dedos c/q
+                                <br/>
+                                Papas Gajo
+                                <br/>
+                                Boneless
+                            </p>
+                        </dfn>
+
+                        <div class="bay" onclick="compartear()">
+                            <button class="button">
+                                Order now<i class=" ri-whatsapp-fill"></i>
+                            </button>
+                        </div>
+                        <script>
+                            function compartear() {
+                            window.open((url = "https://wa.me/6863979804?text=Para%20Compartir%20%0A%20ResBlue%0A%20Guamuchilito%0A%204%20DedosDeQueso%0A%20Papas%20Gajo%0A%20Boneless"), "_self");
+                            }
+                        </script>
+                    </div>
+                </div>
+
+                <div class="popup-screen" data-target="maki">
+
+                    <style>
+                        fieldset {
+                            right: 0;
+                            left: 0;
+                            border: none;
+                        }
+
+                        .col {
+                            display: block;
+                            right: 0;
+                            left: 0;
+                        }
+
+                        .col:first-of-type {
+                            right: 0;
+                            left: 0;
+                        }
+
+                        .row {
+                            position: relative;
+                        }
+
+                        /* CLEARFIX */
+
+                        .cf:before,
+                        .cf:after {
+                            content: " ";
+                            display: block;
+
+                        }
+
+                        .cf:after {
+                            clear: both;
+                        }
+
+
+                        .form-wrapper {
+                            position: relative;
+                            max-width: 100%;
+                            min-width: 370px;
+
+
+                        }
+
+                        .form-wrapper .section {
+                            padding: 10px 10px 0;
+
+                            -webkit-box-sizing: border-box;
+                            -moz-box-sizing: border-box;
+                            box-sizing: content-box;
+                            background-color: #ffffff00;
+                            opacity: 0;
+                            -webkit-transform: scale(1, 0);
+                            -ms-transform: scale(1, 0);
+                            -o-transform: scale(1, 0);
+                            transform: scale(1, 0);
+                            -webkit-transform-origin: top center;
+                            -moz-transform-origin: top center;
+                            -ms-transform-origin: top center;
+                            -o-transform-origin: top center;
+                            transform-origin: top center;
+                            -webkit-transition: all 0.5s ease-in-out;
+                            -o-transition: all 0.5s ease-in-out;
+                            transition: all 0.5s ease-in-out;
+                            text-align: left;
+                            position: absolute;
+
+
+                        }
+
+                        .popup-box,
+                        .form-wrapper .section.is-active {
+                            opacity: 1;
+                            -webkit-transform: scale(1, 1);
+                            -ms-transform: scale(1, 1);
+                            -o-transform: scale(1, 1);
+                            transform: scale(1, 1);
+                        }
+
+                        .form-wrapper .button {
+                            padding: 10px 70px;
+                            border-radius: 7px;
+
+                            background-color: #4eb40a;
+                            display: block;
+                            text-transform: capitalize;
+                            color: #f7f8f8;
+                            cursor: pointer;
+                            text-align: center;
+                            font-size: 17px;
+                            position: relative;
+                            margin-top: 22px;
+                            transition: 0.5s;
+                        }
+
+                        .form-wrapper .button:hover {
+                            transform: scale(1.05);
+                        }
+
+
+                        .user-details .input-box input {
+                            height: 45px;
+                            width: 100%;
+                            outline: none;
+                            font-size: 16px;
+                            border-radius: 5px;
+                            padding-left: 15px;
+                            border: 1px solid #ccc;
+
+                            transition: all 0.3s ease;
+                        }
+
+                        .user-details .input-box input:focus,
+                        .user-details .input-box input:valid {
+                            border-color: #ff7504;
+                        }
+                    </style>
+                    <form class="form-wrapper">
+                        <div class="popup-box">
+
+                            <fieldset class="section is-active">
+                                <i class="ri-close-circle-fill close-btn"></i>
+                                <div class="image__details">
+                                    <img src="./assets/img/armaUno.jpg" alt=""/>
+                                </div>
+                                <div class="namePrice">
+                                    <h3>Combo #1</h3>
+                                    <span>$200.00</span>
+                                </div>
+                                <p>Arma tu combo y ordena pinchando en el boton</p>
+
+                                <style>
+                                    .rollos__select {
+                                        position: relative;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        display: flex;
+                                        right: 1px;
+                                        top: 5px;
+                                        min-width: 155px;
+                                    }
+
+                                    .selectdiv {
+                                        position: relative;
+                                        min-width: 100%;
+                                        padding: 0 11px;
+                                        right: 0;
+                                        top: 0;
+                                    }
+
+                                    .selectdiv select {
+                                        display: block;
+                                        min-width: 100%;
+
+                                        height: 35px;
+
+                                        margin: 0;
+                                        padding: 0 9px;
+                                        font-size: 16px;
+
+                                        color: #333;
+                                        background-color: #ffffff;
+                                        background-image: none;
+                                        border: 1px solid #ffffff;
+                                        border-radius: 6px;
+                                    }
+
+                                    .secondroll {
+                                        position: relative;
+                                        min-width: 100%;
+                                        padding: 0 11px;
+                                        right: 0;
+                                        top: 0;
+                                    }
+
+                                    .secondroll select {
+                                        display: block;
+                                        min-width: 100%;
+
+                                        height: 35px;
+
+                                        margin: 0;
+                                        padding: 0 9px;
+                                        font-size: 16px;
+
+                                        color: #333;
+                                        background-color: #ffffff;
+                                        background-image: none;
+                                        border: 1px solid #ffffff;
+                                        border-radius: 6px;
+                                    }
+                                </style>
+                                <div class="rollos__select">
+                                    <div class="selectdiv">
+                                        <label>
+                                            <select id="first__roll">
+                                                <option selected disabled>Seleccion</option>
+                                                <option>Washington</option>
+                                                <option>Madrid</option>
+                                                <option>Mazatleco</option>
+                                                <option>Culichi</option>
+                                            </select>
+                                        </label>
+                                    </div>
+
+                                    <div class="secondroll">
+                                        <label>
+                                            <select id="second__roll">
+                                                <option selected disabled>Seleccion</option>
+                                                <option>Washington</option>
+                                                <option>Madrid</option>
+                                                <option>Mazatleco</option>
+                                                <option>Culichi</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="button">Order now</div>
+                            </fieldset>
+                            <fieldset class="section">
+                                <div class="user-details">
+                                    <div class="input-box">
+                                        <h3>Nombre</h3>
+                                        <input id="Nombre" name="Nombre" type="text" placeholder="Nombre" required>
+                                        <h3>Direccion</h3>
+                                        <input id="domicilio" type="text" placeholder="Solo en pedidos a Domicilio*" required disabled>
+                                    </div>
+                                </div>
+                                <p>Marque o desmarque la casilla.</p>
+                                <input type="checkbox" name="Domicilio" id="dom1">
+                                <label for="dom1">Domicilio</label>
+
+                                <script>
+                                    var discounted = document.getElementById('dom1');
+                                    var domi = document.getElementById('domicilio');
+                                    function updateStatus() {
+                                        if (discounted.checked) {
+                                            domi.disabled = false;
+                                        } else {
+                                            domi.disabled = true;
+                                        }
+                                    }
+                                    discounted.addEventListener('change', updateStatus)
+                                </script>
+
+
+                                <div onclick="update()" class=" button">
+                                    Order now</div>
+                                <script>
+                                    function update() {
+                                        var sushiOne = document.getElementById("first__roll").value;
+
+                                        var sushiTwo = document.getElementById("second__roll").value;
+
+                                        var userName = document.getElementById("Nombre").value;
+                                        var domi1 = document.getElementById("dom1");
+
+                                        if (domi1.checked) {
+                                            entrega = document.getElementById("domicilio").value;
+                                        } else {
+                                            entrega = document.getElementById("domicilio").value = "Recoger en sucursal";
+                                        }
+
+                                        window.open((url = "https://wa.me/6674120180" + "?text=Arma%20tu%20Combo%201%0A%20" + sushiOne + "%0A%20" + sushiTwo + "%0A%20Nombre:%20%20" + userName + "%0A%20" + entrega), "_self");
+
+                                    }
+                                </script>
+                            </fieldset>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="popup-screen" data-target="combo">
+
+                    <style>
+                        fieldset {
+                            right: 0;
+                            left: 0;
+                            border: none;
+                        }
+
+                        .col {
+                            display: block;
+                            right: 0;
+                            left: 0;
+                        }
+
+                        .col:first-of-type {
+                            right: 0;
+                            left: 0;
+                        }
+
+                        .row {
+                            position: relative;
+                        }
+
+                        /* CLEARFIX */
+
+                        .cf:before,
+                        .cf:after {
+                            content: " ";
+                            display: block;
+
+                        }
+
+                        .cf:after {
+                            clear: both;
+                        }
+
+
+                        .form-wrapper {
+                            position: relative;
+                            max-width: 100%;
+                            min-width: 370px;
+
+
+                        }
+
+                        .form-wrapper .section {
+                            padding: 10px 10px 0;
+
+                            -webkit-box-sizing: border-box;
+                            -moz-box-sizing: border-box;
+                            box-sizing: content-box;
+                            background-color: #ffffff00;
+                            opacity: 0;
+                            -webkit-transform: scale(1, 0);
+                            -ms-transform: scale(1, 0);
+                            -o-transform: scale(1, 0);
+                            transform: scale(1, 0);
+                            -webkit-transform-origin: top center;
+                            -moz-transform-origin: top center;
+                            -ms-transform-origin: top center;
+                            -o-transform-origin: top center;
+                            transform-origin: top center;
+                            -webkit-transition: all 0.5s ease-in-out;
+                            -o-transition: all 0.5s ease-in-out;
+                            transition: all 0.5s ease-in-out;
+                            text-align: left;
+                            position: absolute;
+
+
+                        }
+
+                        .popup-box,
+                        .form-wrapper .section.is-active {
+                            opacity: 1;
+                            -webkit-transform: scale(1, 1);
+                            -ms-transform: scale(1, 1);
+                            -o-transform: scale(1, 1);
+                            transform: scale(1, 1);
+                        }
+
+                        .form-wrapper .button {
+                            padding: 10px 70px;
+                            border-radius: 7px;
+
+                            background-color: #4eb40a;
+                            display: block;
+                            text-transform: capitalize;
+                            color: #f7f8f8;
+                            cursor: pointer;
+                            text-align: center;
+                            font-size: 17px;
+                            position: relative;
+                            margin-top: 22px;
+                            transition: 0.5s;
+                        }
+
+                        .form-wrapper .button:hover {
+                            transform: scale(1.05);
+                        }
+
+
+                        .user-details .input-box input {
+                            height: 45px;
+                            width: 100%;
+                            outline: none;
+                            font-size: 16px;
+                            border-radius: 5px;
+                            padding-left: 15px;
+                            border: 1px solid #ccc;
+
+                            transition: all 0.3s ease;
+                        }
+
+                        .user-details .input-box input:focus,
+                        .user-details .input-box input:valid {
+                            border-color: #ff7504;
+                        }
+                    </style>
+                    <form class="form-wrapper">
+                        <div class="popup-box">
+
+                            <fieldset class="section is-active">
+                                <i class="ri-close-circle-fill close-btn"></i>
+                                <div class="image__details">
+                                    <img src="./assets/img/armaDos.jpg" alt=""/>
+                                </div>
+                                <div class="namePrice">
+                                    <h3>Combo #2</h3>
+                                    <span>$250.00</span>
+                                </div>
+                                <p>Arma tu combo y ordena pinchando en el boton</p>
+
+                                <style>
+                                    .rollos__select {
+                                        position: relative;
+                                        display: inline-flex;
+                                        right: 0;
+                                        top: 5px;
+                                        max-width: 100px;
+                                    }
+
+                                    .selectdiv {
+                                        position: relative;
+                                        right: 1%;
+                                        top: 0;
+                                    }
+
+                                    .selectdiv select {
+                                        display: block;
+                                        max-width: 100%;
+
+                                        height: 35px;
+
+                                        margin: 0;
+                                        padding: 0 9px;
+                                        font-size: 16px;
+
+                                        color: #333;
+                                        background-color: #ffffff;
+                                        background-image: none;
+                                        border: 1px solid #ffffff;
+                                        border-radius: 6px;
+                                    }
+
+                                    .secondroll {
+                                        position: relative;
+                                        right: 0;
+                                        left: 0;
+                                        top: 0;
+                                    }
+
+                                    .secondroll select {
+                                        display: block;
+                                        max-width: 100%;
+
+                                        height: 35px;
+
+                                        margin: 0;
+                                        padding: 0;
+                                        font-size: 16px;
+
+                                        color: #333333de;
+                                        background-color: #ffffff;
+                                        background-image: none;
+                                        border: 1px solid #ffffff;
+                                        border-radius: 6px;
+                                    }
+                                </style>
+                                <div class="rollos__select">
+                                    <div class="selectdiv">
+
+                                        <select id="seven__roll">
+                                            <option selected disabled>Seleccion</option>
+                                            <option>Special Blue</option>
+                                            <option>Supremo</option>
+                                            <option>Sindy</option>
+                                            <option>Madrid</option>
+                                        </select>
+
+                                    </div>
+
+                                    <div class="secondroll">
+                                        <select id="eigth__roll">
+                                            <option selected disabled>Seleccion</option>
+                                            <option>Special Blue</option>
+                                            <option>Supremo</option>
+                                            <option>Sindy</option>
+                                            <option>Madrid</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="button">Order now</div>
+                            </fieldset>
+                            <fieldset class="section">
+                                <div class="user-details">
+                                    <div class="input-box">
+                                        <h3>Nombre</h3>
+                                        <input id="Nombre3" name="Nombre" type="text" placeholder="Nombre" required>
+                                        <h3>Direccion</h3>
+                                        <input id="domicilio3" type="text" placeholder="Solo en pedidos a Domicilio*" required disabled>
+                                    </div>
+                                </div>
+                                <p>Marque o desmarque la casilla.</p>
+                                <input type="checkbox" name="Domicilio" id="dom3">
+                                <label for="dom3">Domicilio</label>
+
+                                <script>
+                                    var discounted3 = document.getElementById('dom3');
+                                    var domi3 = document.getElementById('domicilio3');
+                                    function updateStatus() {
+                                        if (discounted3.checked) {
+                                            domi3.disabled = false;
+                                        } else {
+                                            domi3.disabled = true;
+                                        }
+                                    }
+                                    discounted3.addEventListener('change', updateStatus)
+                                </script>
+
+
+                                <div onclick="ArmaComboDos()" class="button">
+                                    Order now</div>
+                                <script>
+                                    function ArmaComboDos() {
+                                        var sushiSeven = document.getElementById("seven__roll").value;
+
+                                        var sushiEight = document.getElementById("eigth__roll").value;
+
+                                        var userName3 = document.getElementById("Nombre3").value;
+                                        var domi3 = document.getElementById("dom3");
+
+                                        if (domi3.checked) {
+                                            entrega3 = document.getElementById("domicilio3").value;
+                                        } else {
+                                            entrega3 = document.getElementById("domicilio3").value = "Recoger en sucursal";
+                                        }
+                                        window.open((url = "https://wa.me/6674120180" + "?text=Arma%20tu%20Combo%201%0A%20" + sushiSeven + "%0A%20" + sushiEigth + "%0A%20Nombre:%20%20" + userName3 + "%0A%20" + entrega3), "_self");
+
+                                    }
+                                </script>
+                            </fieldset>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="popup-screen" data-target="papayagrande">
+
+                    <style>
+                        fieldset {
+                            right: 0;
+                            left: 0;
+                            border: none;
+                        }
+
+                        .col {
+                            display: block;
+                            right: 0;
+                            left: 0;
+                        }
+
+                        .col:first-of-type {
+                            right: 0;
+                            left: 0;
+                        }
+
+                        .row {
+                            position: relative;
+                        }
+
+                        /* CLEARFIX */
+
+                        .cf:before,
+                        .cf:after {
+                            content: " ";
+                            display: block;
+
+                        }
+
+                        .cf:after {
+                            clear: both;
+                        }
+
+
+                        .form-wrapper {
+                            position: relative;
+                            max-width: 100%;
+                            min-width: 370px;
+
+
+                        }
+
+                        .form-wrapper .section {
+                            padding: 10px 10px 0;
+
+                            -webkit-box-sizing: border-box;
+                            -moz-box-sizing: border-box;
+                            box-sizing: content-box;
+                            background-color: #ffffff00;
+                            opacity: 0;
+                            -webkit-transform: scale(1, 0);
+                            -ms-transform: scale(1, 0);
+                            -o-transform: scale(1, 0);
+                            transform: scale(1, 0);
+                            -webkit-transform-origin: top center;
+                            -moz-transform-origin: top center;
+                            -ms-transform-origin: top center;
+                            -o-transform-origin: top center;
+                            transform-origin: top center;
+                            -webkit-transition: all 0.5s ease-in-out;
+                            -o-transition: all 0.5s ease-in-out;
+                            transition: all 0.5s ease-in-out;
+                            text-align: left;
+                            position: absolute;
+
+
+                        }
+
+                        .popup-box,
+                        .form-wrapper .section.is-active {
+                            opacity: 1;
+                            -webkit-transform: scale(1, 1);
+                            -ms-transform: scale(1, 1);
+                            -o-transform: scale(1, 1);
+                            transform: scale(1, 1);
+                        }
+
+                        .form-wrapper .button {
+                            padding: 10px 70px;
+                            border-radius: 7px;
+
+                            background-color: #4eb40a;
+                            display: block;
+                            text-transform: capitalize;
+                            color: #f7f8f8;
+                            cursor: pointer;
+                            text-align: center;
+                            font-size: 17px;
+                            position: relative;
+                            margin-top: 22px;
+                            transition: 0.5s;
+                        }
+
+                        .form-wrapper .button:hover {
+                            transform: scale(1.05);
+                        }
+
+
+                        .user-details .input-box input {
+                            height: 45px;
+                            width: 100%;
+                            outline: none;
+                            font-size: 16px;
+                            border-radius: 5px;
+                            padding-left: 15px;
+                            border: 1px solid #ccc;
+
+                            transition: all 0.3s ease;
+                        }
+
+                        .user-details .input-box input:focus,
+                        .user-details .input-box input:valid {
+                            border-color: #ff7504;
+                        }
+                    </style>
+                    <form class="form-wrapper">
+                        <div class="popup-box">
+                            <i class="ri-close-circle-fill close-btn"></i>
+                            <fieldset class="section is-active">
+
+                                <div class="image__details">
+                                    <img src="./assets/img/cuatroRollos.jpg" alt=""/>
+                                </div>
+                                <div class="namePrice">
+                                    <h3>4Fantastic</h3>
+                                    <span>$400.00</span>
+                                </div>
+                                <p>Cuatro Rollos + 2lt de Te</p>
+
+                                <style>
+                                    .rollos__select {
+                                        position: relative;
+                                        display: inline-flex;
+                                        right: 0;
+                                        top: 5px;
+                                        max-width: 100px;
+                                    }
+
+                                    .selectdiv {
+                                        position: relative;
+                                        right: 1%;
+                                        top: 0;
+                                    }
+
+                                    .selectdiv select {
+                                        display: block;
+                                        max-width: 100%;
+
+                                        height: 35px;
+
+                                        margin: 0;
+                                        padding: 0 9px;
+                                        font-size: 16px;
+
+                                        color: #333;
+                                        background-color: #ffffff;
+                                        background-image: none;
+                                        border: 1px solid #ffffff;
+                                        border-radius: 6px;
+                                    }
+
+                                    .secondroll {
+                                        position: relative;
+                                        right: 0;
+                                        left: 0;
+                                        top: 0;
+                                    }
+
+                                    .secondroll select {
+                                        display: block;
+                                        max-width: 100%;
+
+                                        height: 35px;
+
+                                        margin: 0;
+                                        padding: 0;
+                                        font-size: 16px;
+
+                                        color: #333333de;
+                                        background-color: #ffffff;
+                                        background-image: none;
+                                        border: 1px solid #ffffff;
+                                        border-radius: 6px;
+                                    }
+                                </style>
+                                <div class="rollos__select">
+                                    <div class="selectdiv">
+
+                                        <select id="five__roll">
+                                            <option selected disabled>Seleccion</option>
+                                            <option>Guamuchilito Nat</option>
+                                            <option>3 Quesos</option>
+                                            <option>Cordon Blue</option>
+                                            <option>RYC</option>
+                                        </select>
+
+                                        <select id="tercer__roll">
+                                            <option selected disabled>Seleccion</option>
+                                            <option>Guamuchilito Nat</option>
+                                            <option>3 Quesos</option>
+                                            <option>Cordon Blue</option>
+                                            <option>RYC</option>
+                                        </select>
+
+                                    </div>
+
+                                    <div class="secondroll">
+
+                                        <select id="six__roll">
+                                            <option selected disabled>Seleccion</option>
+                                            <option>Guamuchilito Nat</option>
+                                            <option>3 Quesos</option>
+                                            <option>Cordon Blue</option>
+                                            <option>RYC</option>
+                                        </select>
+
+
+                                        <select id="cuarto__roll">
+                                            <option selected disabled>Seleccion</option>
+                                            <option>Guamuchilito Nat</option>
+                                            <option>3 Quesos</option>
+                                            <option>Cordon Blue</option>
+                                            <option>RYC</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+
+                                <div class="button">Order now</div>
+                            </fieldset>
+                            <fieldset class="section">
+                                <div class="user-details">
+                                    <div class="input-box">
+                                        <h3>Nombre</h3>
+                                        <input id="Nombre4" name="Nombre" type="text" placeholder="Nombre" required>
+                                        <h3>Direccion</h3>
+                                        <input id="domicilio4" type="text" placeholder="Solo en pedidos a Domicilio*" required disabled>
+                                    </div>
+                                </div>
+                                <p>Marque o desmarque la casilla.</p>
+                                <input type="checkbox" name="Domicilio" id="dom4">
+                                <label for="dom4">Domicilio</label>
+
+                                <script>
+                                    var discounted2 = document.getElementById('dom2');
+                                    var domi2 = document.getElementById('domicilio2');
+                                    function updateStatus() {
+                                        if (discounted2.checked) {
+                                            domi2.disabled = false;
+                                        } else {
+                                            domi2.disabled = true;
+                                        }
+                                    }
+                                    discounted2.addEventListener('change', updateStatus)
+                                </script>
+
+
+                                <div onclick="updateCuatro()" class=" button">
+                                    Order now</div>
+                                <script>
+                                    function updateCuatro() {
+                                        var sushiFive = document.getElementById("five__roll").value;
+
+                                        var sushiSix = document.getElementById("six__roll").value;
+
+                                        var sushiTres = document.getElementById("tercer__roll").value;
+
+                                        var sushiFour = document.getElementById("cuarto__roll").value;
+
+                                        var userName4 = document.getElementById("Nombre4").value;
+                                        var domi4 = document.getElementById("dom4");
+
+                                        if (domi4.checked) {
+                                            entrega4 = document.getElementById("domicilio4").value;
+                                        } else {
+                                            entrega4 = document.getElementById("domicilio4").value = "Recoger en sucursal";
+                                        }
+
+                                        window.open((url = "https://wa.me/6674120180" + "?text=Arma%20tu%20Combo%201%0A%20" + sushiFive + "%0A%20" + sushiSix + "%0A%20" + sushiTres + "%0A%20" + sushiFour + "%0A%20Nombre:%20%20" + userName4 + "%0A%20" + entrega4), "_self");
+
+                                    }
+                                </script>
+                            </fieldset>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--==================== HOME ====================-->
+            <section class="home section" id="home">
+                <div class="home__container container grid">
+                    <div class="home__container container grid">
+                        <img src="assets/img/leaf-branch-5.png" alt="home image" class="home__leaf-1"/>
+                        <img src="assets/img/leaf-branch-6.png" alt="home image" class="home__leaf-2"/>
+
+                        <div class="pic-ctn container grid">
+                            <style>
+                                .pic-ctn {
+                                    width: 0;
+                                    height: 0;
+                                    position: relative;
+                                    align-items: center;
+                                    justify-content: center;
+                                }
+
+                                @keyframes display {
+                                    0% {
+                                        transform: translateX(0);
+                                        opacity: 0;
+                                    }
+
+                                    10% {
+                                        transform: translateX(0);
+                                        opacity: 1;
+                                    }
+
+                                    20% {
+                                        transform: translateX(0);
+                                        opacity: 1;
+                                    }
+
+                                    30% {
+                                        transform: translateX(0);
+                                        opacity: 0;
+                                    }
+
+                                    100% {
+                                        transform: translateX(0);
+                                        opacity: 0;
+                                    }
+                                }
+
+                                .pic-ctn {
+                                    top: 0;
+                                    left: 0;
+                                    position: relative;
+                                    width: 400px;
+                                    height: 270px;
+                                    align-items: center;
+                                    justify-content: center;
+                                    justify-self: center;
+                                }
+
+                                .pic-ctn > img {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    opacity: 0;
+                                    animation: display 50s infinite;
+                                }
+
+                                img:nth-child(2) {
+                                    animation-delay: 10s;
+                                }
+
+                                img:nth-child(3) {
+                                    animation-delay: 20s;
+                                }
+
+                                img:nth-child(4) {
+                                    animation-delay: 30s;
+                                }
+
+                                img:nth-child(5) {
+                                    animation-delay: 40s;
+                                }
+                            </style>
+
+                            <img src="assets/img/home-sushi-rolls.png" alt="" class="pic-ctn"/>
+                            <img src="assets/img/sqssw.png" alt="" class="pic-ctn"/>
+                            <img src="assets/img/M1.jpg" alt="" class="pic-ctn"/>
+                            <img src="assets/img/M2.jpg" alt="" class="pic-ctn"/>
+                        </div>
+                        <div class="home__data">
+                            <h1 class="home__title">
+                                Sushi Lover
+
+                                <div>
+                                    <img src="assets/img/llk.png" alt="home image"/>
+                                    Urban Roll
+                                </div>
+                            </h1>
+
+                            <p class="home__description container grid">
+                                Consulta nuestras promociones, ordena tu pedido con servicio a
+                                                            domicilio o para recoger en sucursal directamente en nuestra web via WHATSAPP
+                            </p>
+
+                            <a href="#popular" class="button">
+                                Combo's
+                                <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <style>
+                    .containerBox_info {
+                        padding-top: 4rem;
+                        grid-template-columns: 300px;
+                        justify-content: center;
+                        row-gap: 1rem;
+                    }
+                    .containerBox__info {
+                        padding: 2rem 2rem 1.3rem;
+                        background-color: hsla(24, 37%, 28%, 0.075);
+                        box-shadow: 0 10px 8px hsla(19, 64%, 4%, 0.2);
+                        border-radius: 2rem;
+                        text-align: center;
+                    }
+
+                    .containerBox__info img {
+                        width: 100%;
+                        max-width: 58px;
+                        height: auto;
+                    }
+
+                    .containerBox__info h3 {
+                        font: 0.75rem;
+                        color: #fff;
+                        font-size: 0.75rem;
+                        font-weight: var(--font-medium);
+                        margin: 5px 0;
+                    }
+
+                    .containerBox__info a {
+                        color: var(--first-color);
+                        font-size: 14px;
+                        letter-spacing: 2px;
+                        transition: all 0.5s ease;
+                    }
+
+                    @media screen and(min-width: 767px) {
+                        .containerBox_info {
+                            grid-template-columns: repeat(3, 300px);
+                        }
+                    }
+
+                    @media screen and(min-width: 1024px) {
+                        .containerBox_info {
+                            grid-template-columns: repeat(3, 300px);
+                            column-gap: 3.5rem;
+                            padding-block: 2rem 4rem;
+                        }
+                    }
+                </style>
+                <div id="contact" class="containerBox_info grid">
+                    <div class="containerBox__info">
+                        <img src="./assets/img/1497849.png"/><br/>
+                        <span>Martes a Domingo</span><br/>
+                        <span>2PM - 11PM</span>
+                        <br/>
+                        <a href="#popular">Ordena Aqui</a>
+                    </div>
+
+                    <div class="containerBox__info">
+                        <img src="./assets/img/252025.png"/><br/>
+                        <span>Del Auguario, 4 de Marzo Culiacan 3321 Sinaloa,
+                                                Mèxico</span><br/>
+                        <a href="maps.app.goo.gl/SEXBtcAh8WUQqYAE7?g_st=ic">Como llegar</a>
+                    </div>
+
+                    <div class="containerBox__info">
+                        <img src="./assets/img/3502039.png"/><br/>
+                        <span>
+                            Telefono
+                            <br/>
+                            667-412-0180</span><br/>
+                        <a href="tel:6674120180">Contactanos</a>
+                    </div>
+                </div>
+                <!--==================== ABOUT ====================-->
+
+                <section class="about section" id="about">
+                    <div class="about__container container grid">
+                        <div class="about__data">
+                            <span class="section__subtitle">About Us</span>
+                            <h2 class="section__title about__title">
+                                <div>
+                                    Sushi Fresco
+                                    <br/>
+                                    <img src="assets/img/sushi.png" alt="about image"/>
+                                </div>
+
+                                Autentico Sinaloense
+                            </h2>
+
+                            <p class="about__description">
+                                Nos apasiona la comida y estamos comprometidos con
+                                                        la calidad y el sabor de cada rollo que preparamos
+                                                        en nuestra cocina. Nuestro equipo utiliza solo los
+                                                        ingredientes más frescos y de la mejor calidad para
+                                                        crear platos que deleitan tanto a los paladares
+                                                        experimentados como a los nuevos amantes del sushi.
+                            </p>
+
+                        </div><img src="./assets/img/about001.jpg" alt="about image" class="about_img">
+                    </div>
+
+                    <img src="assets/img/leaf-branch-7.png" alt="about image" class="about__leaf"/>
+
+                </section>
+
+                <!--==================== POPULAR ====================-->
+                <section class="popular section" id="popular">
+                    <span class="section__subtitle">The Best Food</span>
+                    <h2 class="section__title">Promociones Destacadas</h2>
+                    <p class="grid container" style="text-align: center;">Selecciona y ordena al instante via whatsapp con entrega a domicilio en menos de dos sencillos pasos.</p>
+
+                    <div class="popular__container container grid">
+
+                        <article class="popular__card" data-name="maki">
+                            <img src="assets/img/popular-sushi-rolls.png" alt="popular image" class="popular__img"/>
+                            <h3 class="popular__name">Arma tu Combo #1</h3>
+                            <span class="popular__description">Personaliza tu Sushi Par en base a cuatro deliciosas opciones.
+                            </span>
+                            <span class="popular__price">$200.00</span>
+                            <button class="popular__button ri-whatsapp-line search-btn"></button>
+                        </article>
+
+                        <article class="popular__card" data-name="combo">
+                            <img src="assets/img/popular-spring-rols.png" alt="popular image" class="popular__img"/>
+                            <h3 class="popular__name">Arma tu Combo #2</h3>
+                            <span class="popular__description">Personaliza tu Sushi Par en base a cuatro deliciosas opciones.</span>
+                            <span class="popular__price">$250.00</span>
+                            <button class="popular__button ri-whatsapp-line search-btn"></button>
+                        </article>
+
+                        <article class="popular__card" data-name="companosh">
+                            <img src="assets/img/sadsadsa.png" alt="popular image" class="popular__img"/>
+                            <h3 class="popular__name">Para Compartir</h3>
+                            <span class="popular__description">Para esa reunion especial con un poco de todo para degustar.
+                            </span>
+                            <span class="popular__price">$300.00</span>
+                            <button class="popular__button ri-whatsapp-line search-btn"></button>
+                        </article>
+                        <article class="popular__card" data-name="papayagrande">
+                            <img src="assets/img/popular-onigiri.png" alt="popular image" class="popular__img"/>
+                            <h3 class="popular__name">Los Cuatro Sushi-Fantasticos</h3>
+                            <span class="popular__description">Cuatro rollos a elegir junto con 2 litros de Te
+                            </span>
+                            <span class="popular__price">$400.00</span>
+                            <button class="popular__button ri-whatsapp-line search-btn"></button>
+                        </article>
+                    </div>
+                </section>
+
+                <!--==================== RECENTLY ====================-->
+                <section class="recently section" id="recently">
+                    <div class="recently__container container grid">
+                        <div class="recently__data">
+                            <span class="section__subtitle">Recien Agregados</span>
+                            <h2 class="section__title">
+                                Boneless
+                                <br/>
+                                Papas Gajo
+                            </h2>
+
+                            <p class="recently__description">
+                                Mira lo nuevo que traemos para ofrecer en nuestro Menu o siguenos en instagram para ser el
+                                                        primero en enterarte.
+                            </p>
+
+                            <a href="#" class="button">
+                                Menu
+                                <i class="ri-arrow-right-line"></i>
+                            </a>
+
+                            <img src="assets/img/spinach-leaf.png" alt="recently image" class="recently__data-img"/>
+                        </div>
+
+                        <img src="assets/img/recently-salmon-sushi.png" alt="recently image" class="recently__img"/>
+                    </div>
+
+                    <img src="assets/img/leaf-branch-5.png" alt="recently image" class="recently__leaf-1"/>
+                    <img src="assets/img/leaf-branch-6.png" alt="recently image" class="recently__leaf-2"/>
+                </section>
+
+                <!--==================== NEWSLETTER ====================-->
+                <section class="newsletter section">
+                    <div class="newsletter__container container">
+                        <div class="newsletter__content grid">
+                            <img src="assets/img/newsletter-sushi.png" alt="newsletter image" class="newsletter__img"/>
+                            <div class="newsletter__data">
+                                <span class="section__subtitle">Cliente Distinguido</span>
+                                <h2 class="section__title">
+                                    Suscribete para
+                                    <br/>
+                                    Ofertas Especiales
+                                </h2>
+
+                                <form action="" class="newsletter__form">
+                                    <input type="email" placeholder="Enter email" class="newsletter__input"/>
+                                    <button class="button newsletter__button">
+                                        Subscribe
+                                        <i class="ri-send-plane-line"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <img src="assets/img/spinach-leaf.png" alt="newsletter image" class="newsletter__spinach"/>
+                    </div>
+                </section>
+            </main>
+
+            <!--==================== FOOTER ====================-->
+            <footer class="footer">
+                <div class="footer__container container grid">
+                    <div>
+                        <a href="#" class="footer__logo">
+                            <img src="assets/img/logo.png" alt="logo image"/>
+                            Restaurant Sushi
+                        </a>
+
+                        <p class="footer__description">
+                            Nuestro enfoque es ofrecer
+                            <br/>
+                            sushi fresco y autentico de
+                            <br/>
+                            Culiacán para el mundo.
+                        </p>
+                    </div>
+
+                    <div class="footer__content">
+                        <div>
+                            <h3 class="footer__title">Main Menu</h3>
+                            <ul class="footer__links">
+                                <li>
+                                    <a href="#about" class="footer__link">About</a>
+                                </li>
+
+                                <li>
+                                    <a href="/menu" class="footer__link">Menu</a>
+                                </li>
+
+                                <li>
+                                    <a href="./assets/img/promociones.jpg" class="footer__link">Promociones</a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="footer__link">Eventos</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="footer__title">Information</h3>
+                            <ul class="footer__links">
+                                <li>
+                                    <a href="#contact" class="footer__link">Contacto</a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="footer__link">Videos</a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="footer__link">Reservacion</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="footer__title">Address</h3>
+                            <ul class="footer__links">
+                                <li class="footer__information">
+                                    Del Auguario, 4 de Marzo
+                                    <br/>
+                                    Culiacan 3321 Sinaloa, Mèxico
+                                </li>
+
+                                <li class="footer__information">
+                                    Martes a Domingo
+                                    <br/>
+                                    2PM - 11PM
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="footer__title">Social Media</h3>
+                            <ul class="footer__social">
+                                <a href="https://www.facebook.com/urbanrollmx" target="_blank" class="footer__social-link">
+                                    <i class="ri-facebook-circle-fill"></i>
+                                </a>
+
+                                <a href="https://www.instagram.com/urbanrollmx" target="_blank" class="footer__social-link">
+                                    <i class="ri-instagram-fill"></i>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <img src="assets/img/spring-onion.png" alt="footer image" class="footer__onion"/>
+                    <img src="assets/img/spinach-leaf.png" alt="footer image" class="footer__spinach"/>
+                    <img src="assets/img/leaf-branch-5.png" alt="footer image" class="footer__leaf"/>
+                </div>
+
+                <div class="footer__info container">
+                    <div class="footer__card">
+                        <img src="assets/img/footer-card-1.png" alt="footer image"/>
+                        <img src="assets/img/footer-card-2.png" alt="footer image"/>
+                        <img src="assets/img/footer-card-3.png" alt="footer image"/>
+                    </div>
+
+                    <span class="footer__copy">
+                        &#169; Copyright Urban Roll All rights reserved
+                    </span>
+                </div>
+            </footer>
+
+            <!--========== WHATSAPP BTN ==========-->
+
+            <a href="https://wa.me/6674120180?text=Hola!" class="btn-wsp" target="_blank">
+                <i class="fa fa-whatsapp icono"></i>
+            </a>
+
+            <!--=============== MAIN JS ===============-->
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $(".form-wrapper .button").click(function () {
+                        var button = $(this);
+                        var currentSection = button.parents(".section");
+                        var currentSectionIndex = currentSection.index();
+                        var headerSection = $(".steps li").eq(currentSectionIndex);
+                        currentSection.removeClass("is-active").next().addClass("is-active");
+                        headerSection.removeClass("is-active").next().addClass("is-active");
+
+                        $(".form-wrapper").submit(function (e) {
+                            e.preventDefault();
+                        });
+
+                        if (currentSectionIndex == 2) {
+                            $(document).find(".form-wrapper .section").first().addClass("is-active");
+                            $(document).find(".steps li").first().addClass("is-active");
+                        }
+                    });
+                });
+            </script>
+
+            <script>
+                let preveiwContainer = document.querySelector(".preview");
+                let previewBox = preveiwContainer.querySelectorAll(".popup-screen");
+
+                document.querySelectorAll(".popular__container .popular__card").forEach((popular__card) => {
+                    popular__card.onclick = () => {
+                        preveiwContainer.style.display = "flex";
+                        let name = popular__card.getAttribute("data-name");
+                        previewBox.forEach((preview) => {
+                            let target = preview.getAttribute("data-target");
+                            if (name == target) {
+                                preview.classList.add("active");
+                            }
+                        });
+                    };
+                });
+
+                console.log(previewBox);
+
+                previewBox.forEach((close) => {
+                    close.querySelector(".close-btn").onclick = () => {
+                        close.classList.remove("active");
+                        preveiwContainer.style.display = "none";
+                    };
+                });
+            </script>
+
+            <script type="text/javascript">
+                const popupScreen = document.querySelector(".popup-screen");
+                const popupBox = document.querySelector(".popup-box");
+                const closeBtn = document.querySelector(".close-btn");
+                const openBtn = document.querySelector(".popular__button");
+
+                openBtn.addEventListener("click", () => {
+                    popupScreen.classList.add("active");
+                });
+
+                closeBtn.addEventListener("click", () => {
+                    popupScreen.classList.remove("active"); // Close the opup screen on click
+
+                    document.cookie = "WebsiteName=testWebsite; max-age=" + 24 * 60 * 60; // 1 day = 24 hours = 42*60*60
+                });
+            </script>
+            <script src="./assets/main.js"></script>
+        </body>
+    </body>
+</html>
